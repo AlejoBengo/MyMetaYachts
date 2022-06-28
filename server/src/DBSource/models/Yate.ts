@@ -53,9 +53,12 @@ class Yate {
 
    @prop({ required: true, trim: true })
    description: string;
-
+   
    @prop({ type: () => [String], required: false, trim: true })
    pictures: Array<string>;
+   
+   @prop({ required: true})
+   price: number;
 }
 
 export const YateCollection = getModelForClass(Yate);
